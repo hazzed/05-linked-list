@@ -1,8 +1,6 @@
 'use strict';
 
-
 class LinkedList{
-
   constructor(value){
     this.value = value;
     this.next = null;
@@ -10,9 +8,8 @@ class LinkedList{
 
   append(node){
     if(!(node instanceof LinkedList))
-      throw new TypeError('<Node> should be an instance of LinkedList');
+      throw new TypeError('<node> should be an instance of LinkedList');
     
-
     if(!this.next)
       this.next = node;
     else
@@ -22,17 +19,16 @@ class LinkedList{
   }
 
   find(value){
-    if(!(node instanceof LinkedList))
-      throw new TypeError('<Node> should be an instance of LinkedList');
-
-      if(this.node)
-        return this;
-      if(this.node)
-  };
+    if(this.value === value) {
+      return this;
+    } else {
+      return null;
+    }
+  }
 
   remove(node){
     if(!(node instanceof LinkedList))
-      throw new TypeError('<Node> should be an instance of LinkedList');
+      throw new TypeError('<node> should be an instance of LinkedList');
     
     if(!this.next)
       return this;
@@ -43,7 +39,6 @@ class LinkedList{
     }
     return this;
   }
-
 }
 
 module.exports = LinkedList;
